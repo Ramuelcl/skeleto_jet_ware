@@ -22,28 +22,29 @@
 </head>
 
 <body class="background-color:blue">
-  <div class="container mx-auto">
-    <x-alert color="blue" class="mb-4 drop-shadow-lg">
-      <x-slot name='title'>
-        {{ __('Guarning') }}
-      </x-slot>
-      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum assumenda alias obcaecati distinctio error
-      mollitia eius fuga sed itaque, doloribus quo dolor, doloremque deserunt harum suscipit inventore in sunt fugit
-      amet voluptas dolorum at. Dignissimos ipsam iusto tempore earum pariatur reiciendis harum impedit quae eveniet
-      autem.
-    </x-alert>
+  <x-app-layout>
+    <div class="container mx-auto">
+      <x-alert color="blue" class="mb-4 drop-shadow-lg">
+        <x-slot name='title'>
+          {{ __('Guarning') }}
+        </x-slot>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum assumenda alias obcaecati distinctio error
+        mollitia eius fuga sed itaque, doloribus quo dolor, doloremque deserunt harum suscipit inventore in sunt fugit
+        amet voluptas dolorum at. Dignissimos ipsam iusto tempore earum pariatur reiciendis harum impedit quae eveniet
+        autem.
+      </x-alert>
 
-    <x-alert2 color="blue" class="mb-4 drop-shadow-lg">
-      <x-slot name='title'>
-        {{ __('Guarning') }}
-      </x-slot>
-      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum assumenda alias obcaecati distinctio error
-      mollitia eius fuga sed itaque, doloribus quo dolor, doloremque deserunt harum suscipit inventore in sunt fugit
-      amet voluptas dolorum at. Dignissimos ipsam iusto tempore earum pariatur reiciendis harum impedit quae eveniet
-      autem.
-    </x-alert2>
-  </div>
-
+      <x-alert2 color="blue" class="mb-4 drop-shadow-lg">
+        <x-slot name='title'>
+          {{ __('Guarning') }}
+        </x-slot>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum assumenda alias obcaecati distinctio error
+        mollitia eius fuga sed itaque, doloribus quo dolor, doloremque deserunt harum suscipit inventore in sunt fugit
+        amet voluptas dolorum at. Dignissimos ipsam iusto tempore earum pariatur reiciendis harum impedit quae eveniet
+        autem.
+      </x-alert2>
+    </div>
+  </x-app-layout>
 </body>
 
 </html>
