@@ -15,10 +15,6 @@
           <x-jet-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
             {{ __('Dashboard') }}
           </x-jet-nav-link>
-
-          <x-jet-nav-link href="{{ route('blog') }}" :active="request()->routeIs('blog')">
-            {{ __('Blog') }}
-          </x-jet-nav-link>
         </div>
       </div>
 
@@ -82,14 +78,11 @@
           <x-jet-dropdown align="right" width="48">
             <x-slot name="trigger">
               @if (Laravel\Jetstream\Jetstream::managesProfilePhotos())
-                @auth
-                  <button
-                    class="flex text-sm border-2 border-transparent rounded-full focus:outline-none focus:border-gray-300 transition">
-                    <img class="h-8 w-8 rounded-full object-cover" src="{{ Auth::user()->profile_photo_url }}"
-                      alt="{{ Auth::user()->name }}" />
-                  </button>
-
-                @endauth
+                <button
+                  class="flex text-sm border-2 border-transparent rounded-full focus:outline-none focus:border-gray-300 transition">
+                  <img class="h-8 w-8 rounded-full object-cover" src="{{ Auth::user()->profile_photo_url }}"
+                    alt="{{ Auth::user()->name }}" />
+                </button>
               @else
                 <span class="inline-flex rounded-md">
                   <button type="button"
@@ -177,7 +170,6 @@
             <div class="font-medium text-base text-gray-800">{{ Auth::user()->name }}</div>
             <div class="font-medium text-sm text-gray-500">{{ Auth::user()->email }}</div>
           </div>
-
         @endauth
       </div>
 
