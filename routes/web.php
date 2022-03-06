@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\banca\BancaController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,6 +17,23 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+// Route::get('banca/importar', [BancaController::class, 'importar']);
+Route::resource(
+    'banca',
+    BancaController::class,
+)->names([
+        'index'=>'banca.index',
+        'show'=>'banca.mostrar',
+        'create'=>'banca.build',
+        'importar'=>'banca.importar',
+    ]);
+
+// Route::resources([
+//     'banca', BancaController::class,
+//     // 'posts',PostController::class,
+//     ]);
+
 Route::get('/blog', function () {
     return view('blog.blog');
 })->name('blog');
