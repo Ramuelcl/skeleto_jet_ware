@@ -18,7 +18,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-// Route::get('banca/importar', [BancaController::class, 'importar']);
+Route::get('/banca/importar', [BancaController::class, 'importar'])->name('banca.importar');
 Route::resource(
     'banca',
     BancaController::class,
@@ -26,7 +26,7 @@ Route::resource(
         'index'=>'banca.index',
         'show'=>'banca.mostrar',
         'create'=>'banca.build',
-        'importar'=>'banca.importar',
+        // 'importar'=>'banca.importar',
     ]);
 
 // Route::resources([
